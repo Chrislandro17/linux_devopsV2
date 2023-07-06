@@ -1,6 +1,6 @@
 tasks:
   - name: nginx
     init: |
-      sudo apt update && sudo apt upgrade
-      sudo apt install -y nginx
-      sudo systemctl restart nginx
+       apt update && sudo apt upgrade
+       apt install -y nginx
+       systemctl restart nginx
