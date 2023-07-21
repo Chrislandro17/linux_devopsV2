@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  nginx:
+    depends_on:
+      - api
+    restart: always
+    build:
+      dockerfile: dockerfile
+      context: ./nginx
+    ports:
+      - "81:80"
+  api:
+    build:
+      dockerfile: dockerfile
+      context: "./NodeReact"
